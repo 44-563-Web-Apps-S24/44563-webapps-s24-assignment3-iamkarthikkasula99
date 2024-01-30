@@ -43,14 +43,12 @@
         <h3>Code Section</h3>
         <p>Snippet Description: dart, remove falsy</p>
         <pre>
-            new Promise((resolve, reject) => {
-                // asynchronous operation
+            const difference = (a, b) => {
+                const s = new Set(b);
+                return a.filter(x => !s.has(x));
+              };
               
-                // then in case of success
-                resolve();
-                // or
-                reject("failure reason");
-              });
+              difference([1, 2, 3], [1, 2, 4]); // [3]
      </pre>
     <p>Source: <a href="https://code.pieces.app/collections/javascript"> Java code Source</a></p>
 </body>
